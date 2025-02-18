@@ -1,0 +1,14 @@
+import pickle
+
+# Assuming 'vectorizer' is your trained TfidfVectorizer
+# and 'tfidf_matrix' is the transformed lyrics dataset
+
+# Save TF-IDF model (matrix)
+with open("tfidf_model.pkl", "wb") as model_file:
+    pickle.dump(tfidf_matrix, model_file)
+
+# Save the vectorizer
+with open("tfidf_vectorizer.pkl", "wb") as vectorizer_file:
+    pickle.dump(vectorizer, vectorizer_file)
+
+print("TF-IDF model and vectorizer saved successfully!")
